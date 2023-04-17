@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Kattis\Calculator.csproj", "{2A4C8DC6-6B01-4FAB-91C6-A94EDBD93B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A4C8DC6-6B01-4FAB-91C6-A94EDBD93B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4C8DC6-6B01-4FAB-91C6-A94EDBD93B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4C8DC6-6B01-4FAB-91C6-A94EDBD93B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4C8DC6-6B01-4FAB-91C6-A94EDBD93B28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC841DDA-0EF7-4571-A271-74D94029634C}
+	EndGlobalSection
+EndGlobal
