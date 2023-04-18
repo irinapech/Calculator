@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-using System.Runtime.CompilerServices;
-using CalculatorLibrary;
+﻿using CalculatorLibrary;
 
 namespace CalculatorProgram
 {
@@ -42,21 +40,68 @@ namespace CalculatorProgram
                 }
 
                 Console.WriteLine("Choose an operator from the following list:");
-                Console.WriteLine("\ta - Add");
-                Console.WriteLine("\ts - Subtract");
-                Console.WriteLine("\tm - Multiply");
-                Console.WriteLine("\td - Divide");
+                Console.WriteLine("\tA - Add");
+                Console.WriteLine("\tS - Subtract");
+                Console.WriteLine("\tM - Multiply");
+                Console.WriteLine("\tD - Divide");
+                Console.WriteLine("\t5 - Remainder");
 
-                string operation = Console.ReadLine();
+                string operation = "";
+
+                ConsoleKey key = Console.ReadKey(true).Key;
+
+                if (key == ConsoleKey.A)
+                {
+                    operation = "a";
+                }
+                if (key == ConsoleKey.S)
+                {
+                    operation = "s";
+                }
+                if (key == ConsoleKey.M)
+                {
+                    operation = "m";
+                }
+                if (key == ConsoleKey.D)
+                {
+                    operation = "d";
+                }
+                if (key == ConsoleKey.D5)
+                {
+                    operation = "r";
+                }
 
                 while (string.IsNullOrEmpty(operation))
                 {
-                    Console.WriteLine("This is not a valid input. Please choose an operator from the foloowing list");
-                    Console.WriteLine("\ta - Add");
-                    Console.WriteLine("\ts - Subtract");
-                    Console.WriteLine("\tm - Multiply");
-                    Console.WriteLine("\td - Divide");
-                    operation = Console.ReadLine();
+                    Console.WriteLine("Choose an operator from the following list:");
+                    Console.WriteLine("\tA - Add");
+                    Console.WriteLine("\tS - Subtract");
+                    Console.WriteLine("\tM - Multiply");
+                    Console.WriteLine("\tD - Divide");
+                    Console.WriteLine("\t5 - Remainder");
+
+                    key = Console.ReadKey(true).Key;
+
+                    if (key == ConsoleKey.A)
+                    {
+                        operation = "a";
+                    }
+                    if (key == ConsoleKey.S)
+                    {
+                        operation = "s";
+                    }
+                    if (key == ConsoleKey.M)
+                    {
+                        operation = "m";
+                    }
+                    if (key == ConsoleKey.D)
+                    {
+                        operation = "d";
+                    }
+                    if (key == ConsoleKey.D5)
+                    {
+                        operation = "r";
+                    }
                 }
 
                 try
@@ -71,12 +116,16 @@ namespace CalculatorProgram
                 catch (Exception e)
                 {
                     Console.WriteLine("An exception occured trying to do the math.\n - Details: " + e.Message);
+                    Console.WriteLine("Press 'End' and Enter to close the app or press any other key and Enter to continue: ");
+                    if (Console.ReadKey().Key == ConsoleKey.End)
+                        endApp = true;
+                    Console.WriteLine("\n");
                 }
 
                 Console.WriteLine("-----------------------");
 
-                Console.WriteLine("Press 'n' and Enter to close the app or press any other key and Enter to continue: ");
-                if (Console.ReadLine() == "n")
+                Console.WriteLine("Press 'End' and Enter to close the app or press any other key and Enter to continue: ");
+                if (Console.ReadKey().Key == ConsoleKey.End)
                     endApp = true;
                 Console.WriteLine("\n");
             }

@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace CalculatorLibrary
 {
@@ -49,6 +48,13 @@ namespace CalculatorLibrary
                     result = number1 * number2;
                     //Trace.WriteLine(String.Format("{0} * {1} = {2}", number1, number2, result));
                     writer.WriteValue("Multiple");
+                    break;
+                case "r":
+                    if (number2 != 0)
+                    {
+                        result = number1 % number2;
+                        writer.WriteValue("Remainder");
+                    }
                     break;
                 case "d":
                     if (number2 != 0)
