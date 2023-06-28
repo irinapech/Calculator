@@ -7,7 +7,7 @@ namespace CalculatorApp
     {
         static void Main()
         {
-            Console.WriteLine("Console Calulator in C#");
+            Console.WriteLine("Console Calculator in C#");
             Console.WriteLine("-----------------------");
 
             Calculator calculator = new Calculator();
